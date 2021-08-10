@@ -1,0 +1,13 @@
+df_titanic <- data.frame(Titanic)
+df_titanic
+
+library(data.table)
+
+data_titan <- data.table(df_titanic)
+data_titan
+
+total_pass <- data_titan[, sum(Freq)]
+total_pass
+
+data_survive <- data_titan[, list(n=sum(Freq)), by='survived']
+data_survive
